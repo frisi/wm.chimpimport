@@ -17,7 +17,7 @@ HOW?
 this script allows to import subscriptions even though some or all emails are role addresses
 using the mailchimp API `MCAPI`__.
 
-.. __:http://apidocs.mailchimp.com/api/1.2/
+.. __: http://apidocs.mailchimp.com/api/1.2/
 
 type ``chimpimport --help`` for usage information::
 

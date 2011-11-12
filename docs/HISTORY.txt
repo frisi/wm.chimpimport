@@ -1,8 +1,8 @@
 Changelog
 =========
 
-after 1.0
----------
+1.1 (2011-11-12)
+----------------
 
 - added support for multiple lists (prompt user which one to choose)
 
