@@ -29,6 +29,23 @@ def csv2Batch(csvfilename):
     return batch
 
 
+def promptForList(availableLists):
+    """lists available lists and prompts user to select one.
+    returns the selected list"""
+
+    prompt = u"List selection:"
+    for i,list in enumerate(availableLists):
+        prompt += u"\n%2d %s (%d subscribers)" % (i+1, list['name'], list['member_count'])
+
+    prompt += u"\nPlease enter the number of the list to import your data into:"
+
+    selection = int(raw_input(prompt.encode('utf-8')))
+
+    try:
+        return availableLists[selection-1]
+    except KeyError:
+        return promptForList(availableLists)
+
 
 def main():
 
@@ -71,12 +88,13 @@ example csv content:
     if len(availableLists) < 1:
         print "no lists available to import into"
         return 1
-
-    if len(availableLists) > 1:
-        print "multiple lists available, no selection available atm - sorry"
-        return 1
-
-    mList = availableLists[0]
+    elif len(availableLists) > 1:
+        mList = promptForList(availableLists)
+        if not mList:
+            print "no list chosen - aborting"
+            return 1
+    else:
+        mList = availableLists[0]
 
     batch = csv2Batch(args[0])
 

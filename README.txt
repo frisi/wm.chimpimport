@@ -34,7 +34,7 @@ type ``chimpimport --help`` for usage information::
     Options:
       -h, --help            show this help message and exit
       -k APIKEY, --apikey=APIKEY
-                            your mailchimp api key. obtain one with ``wget 'http:/
+                            your mailchimp api key. obtain one with ``wget 'https:/
                             /api.mailchimp.com/1.1/?output=json&method=login&passw
                             ord=xxxxxx&username=yyyyyyyy' -O apikey``
 
@@ -45,4 +45,4 @@ Successfully used for 1500 subscribers.
 
 Supports custom fields (just add headers for them to the import csv)
 
-Currently only supports ONE subscriber list. If you have multiple the script will exit with an error message.
+Supports multiple subscriber list. If you have multiple lists, the script will prompt the list to import data into.
