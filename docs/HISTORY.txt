@@ -1,6 +1,15 @@
 Changelog
 =========
 
+after 1.1
+---------
+
+- login() api method has been disabled (see `shutdown info`_)
+  so we change the help text on how to obtain an api key
+
+  .. _`shutdown info`: http://us1.campaign-archive1.com/?u=f7b9ee22124ff6454424dc10c&id=2b2a3d9f1f
+
+
 1.1 (2011-11-12)
 ----------------
 

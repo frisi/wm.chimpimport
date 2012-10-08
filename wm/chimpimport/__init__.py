@@ -63,7 +63,7 @@ example csv content:
 
     parser.add_option('-k', '--apikey',
                       dest='apiKey', default=None,
-                      help="your mailchimp api key. obtain one with ``wget 'http://api.mailchimp.com/1.1/?output=json&method=login&password=xxxxxx&username=yyyyyyyy' -O apikey``")
+                      help="your mailchimp api key. to obtain one: http://kb.mailchimp.com/article/where-can-i-find-my-api-key")
 
     (options, args) = parser.parse_args()
 
@@ -73,7 +73,7 @@ example csv content:
 
     if not options.apiKey:
         if not 'MAILCHIMP_APIKEY' in os.environ:
-            parser.error("Either set the MAILCHIMP_APIKEY environment variable add the -k option (see -h for help).")
+            parser.error("Either set the MAILCHIMP_APIKEY environment variable or add the -k option (see -h for help).")
             return
         else:
             API_KEY = os.environ['MAILCHIMP_APIKEY']
