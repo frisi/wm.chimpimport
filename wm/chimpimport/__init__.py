@@ -5,13 +5,13 @@ import optparse
 import csv
 import os
 
-SAMPLE_BATCH = [{'EMAIL': 'office@webmeisterei.com',
+SAMPLE_BATCH = [{'EMAIL': 'user@domain.com',
           'EMAIL_TYPE':'html', #needs to be present
-          'Firma': u"A. Thaler Möbel für den Gast".encode('utf-8')},
+          'Firma': u"Ümlauts make you häppy".encode('utf-8')},
 
-         {'EMAIL': 'harald@webmeisterei.com',
+         {'EMAIL': 'user@otherdomain.com',
           'EMAIL_TYPE':'html',
-          'Firma': u"AEC-Irino AG"},
+          'Firma': u"ACME Coop."},
           ]
 
 def csv2Batch(csvfilename):
