@@ -34,9 +34,8 @@ type ``chimpimport --help`` for usage information::
     Options:
       -h, --help            show this help message and exit
       -k APIKEY, --apikey=APIKEY
-                            your mailchimp api key. obtain one with ``wget 'https:/
-                            /api.mailchimp.com/1.1/?output=json&method=login&passw
-                            ord=xxxxxx&username=yyyyyyyy' -O apikey``
+                            your mailchimp api key. to obtain one:
+                            http://kb.mailchimp.com/article/where-can-i-find-my-api-key``
 
 Status
 ======
