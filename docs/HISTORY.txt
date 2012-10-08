@@ -9,6 +9,7 @@ after 1.1
 
   .. _`shutdown info`: http://us1.campaign-archive1.com/?u=f7b9ee22124ff6454424dc10c&id=2b2a3d9f1f
 
+- rename README.txt to .rst for nice display on github
 
 1.1 (2011-11-12)
 ----------------
