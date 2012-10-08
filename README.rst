@@ -33,6 +33,7 @@ type ``chimpimport --help`` for usage information::
 
     Options:
       -h, --help            show this help message and exit
+      -u, --updateExisting  if given, existing subscribers will be updated
       -k APIKEY, --apikey=APIKEY
                             your mailchimp api key. to obtain one:
                             http://kb.mailchimp.com/article/where-can-i-find-my-api-key``

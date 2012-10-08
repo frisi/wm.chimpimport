@@ -61,6 +61,11 @@ example csv content:
 
 """)
 
+    parser.add_option('-u', '--updateExisting',
+                      default=False,
+                      action="store_true", dest="updateExisting",
+                      help="if given, existing subscribers will be updated")
+
     parser.add_option('-k', '--apikey',
                       dest='apiKey', default=None,
                       help="your mailchimp api key. to obtain one: http://kb.mailchimp.com/article/where-can-i-find-my-api-key")
@@ -83,6 +88,9 @@ example csv content:
 
     chimp = chimpy.Connection(API_KEY)
 
+    # chimpy's default (http://us.api.mailchimp.com/1.1/) sometimes does not work
+    # http://apidocs.mailchimp.com/api/1.1/
+    # chimp.url = 'http://us2.api.mailchimp.com/1.1/'
 
     availableLists = chimp.lists()
     if len(availableLists) < 1:
@@ -102,7 +110,7 @@ example csv content:
 
     print "list members before import: %d" % len(chimp.list_members(mList['id']))
 
-    result = chimp.list_batch_subscribe(mList['id'], batch, double_optin=False)
+    result = chimp.list_batch_subscribe(mList['id'], batch, double_optin=False, update_existing=options.updateExisting)
 
     print "list members after import: %d" % len(chimp.list_members(mList['id']))
 

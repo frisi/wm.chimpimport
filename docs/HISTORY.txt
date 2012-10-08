@@ -4,6 +4,8 @@ Changelog
 after 1.1
 ---------
 
+- existing subscribers get updated when importing with ``-u`` flag
+
 - login() api method has been disabled (see `shutdown info`_)
   so we change the help text on how to obtain an api key
 
